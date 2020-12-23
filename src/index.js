@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/*
+const DADOS = [
+  { id: "0", name: "Comer", completed: true },
+  { id: "1", name: "Dormir", completed: false },
+  { id: "2", name: "Exercitar", completed: false }
+];
+*/
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
