@@ -1,0 +1,33 @@
+.botao-add {
+    margin-left: -15px;
+    border-radius: 50%;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(251, 113, 0);
+    font-weight: bold;
+    height: 75px;
+    width: 75px;
+    font-size: xx-large;
+}
+
+.entrada{
+    margin: 0;
+    padding: 5px;
+    font-size: large;
+    height: 30px;
+    outline: 0;
+    font-weight: 500;
+}
+
+.titulo {
+    color: rgb(251, 113, 0);
+    padding: 0;
+    margin: 0;
+}
+
+.botao-add:hover {
+    background-color:  rgb(7,188,12);
+    transition: .3s;
+}

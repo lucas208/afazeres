@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
-import Item from '../src/components/Item'
-import Form from '../src/components/Form'
+import Item from '../src/components/item/index'
+import Form from '../src/components/form/index'
 import { nanoid } from 'nanoid'
 import { resgataItens, salvaItens } from './auxiliares'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -31,13 +32,9 @@ function App() {
 
   function deletar(id){
     const afazeresRestantes = afazeres.filter(afazer => id !== afazer.id)
-    if(afazeresRestantes){
-      setAfazeres(afazeresRestantes)
-      salvaItens('itens', afazeresRestantes)
-      toast.success('Afazer excluído com sucesso')
-    } else {
-      toast.error('Erro ao excluir o afazer')
-    }
+    setAfazeres(afazeresRestantes)
+    salvaItens('itens', afazeresRestantes)
+    toast.success('Afazer excluído com sucesso')
   }
 
   return (

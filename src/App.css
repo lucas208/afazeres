@@ -1,13 +1,13 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
 .App {
   text-align: center;
-}
-
-.Lista-afazeres {
+  justify-content: center;
+  display: flex;
   align-items: center;
-  list-style: none;
-  
 }
 
 body {
-  background-color: azure;
+  background-color: rgb(244, 244, 244);
 }

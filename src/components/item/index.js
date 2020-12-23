@@ -1,10 +1,12 @@
 import React from 'react'
-import './styles/Item.css'
+import './styles.css'
+import { FaTrash } from 'react-icons/fa'
 
 const Item = (props) => {
 
     return (
-        <li className="list-item">
+        <li className="list-item" style={{borderLeftColor: props.completed ? 'rgb(7,188,12)' : 'rgb(251, 113, 0)'}} htmlFor={props.id}>
+            <div className="check-label">
             <input 
                 className="check"
                 id={props.id} 
@@ -15,9 +17,10 @@ const Item = (props) => {
             <label className="nome" style={{textDecoration: props.completed ? 'line-through' : 'none'}} htmlFor={props.id}>
                 {props.name}
             </label>
-            <button className="botao-excluir" type="button" onClick={() => props.deletar(props.id)}>
-                Excluir 
-            </button>
+            </div>
+            <label className="botao-excluir" type="button" onClick={() => props.deletar(props.id)}>
+                <FaTrash color="rgb(135,135,135)" />
+            </label>
         </li>
     )
 }
