@@ -37,6 +37,17 @@ function App() {
     toast.success('Afazer excluído com sucesso')
   }
 
+  function editar(id, novoAfazer){
+    const afazeresAtualizados = afazeres.map(afazer => {
+      if(id === afazer.id){
+        return {...afazer, name: novoAfazer}
+      }
+      return afazer;
+    })
+    setAfazeres(afazeresAtualizados)
+    salvaItens('itens', afazeresAtualizados)
+  }
+
   return (
     <div className="App">
       <ul className="Lista-afazeres">
@@ -49,6 +60,7 @@ function App() {
             key={afazer.id}
             completar={completar}
             deletar={deletar}
+            editar={editar}
           />
           )
         )}
